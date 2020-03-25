@@ -1,0 +1,1 @@
+curl -v -k -H "Content-Type: application/json" -H "Expect:" -X POST -d @request.json "https://PhantomJScloud.com/api/browser/v2/YOUR-API-KEY/"  -o capture.jpg

@@ -1,4 +1,4 @@
-# [Auto Social Media Publisher](https://jaindavid.blogspot.com/2020/04/auto-social-media-publisher.html)
+# [Auto Social Media Publisher](https://aadityajain-dev.blogspot.com/2020/05/auto-social-media-publisher.html)
 
 
 You can use these scripts for remotely publishing stuff on your social media profile & pages.
@@ -6,7 +6,7 @@ You can use these scripts for remotely publishing stuff on your social media pro
 With a free zoho social account you can connect a **Facebook Page**, a **Facebook Group**, a **Twitter Profile**, a **Linkedin Profile**, a **Linkedin Company Page**, **Google My Business** & a **Instagram Profile** and publish stuff on all of them with a simple click.
 
 
-[**Read more about it here**](https://jaindavid.blogspot.com/2020/04/auto-social-media-publisher.html)
+[**Read more about it here**](https://aadityajain-dev.blogspot.com/2020/05/auto-social-media-publisher.html)
 
 
 

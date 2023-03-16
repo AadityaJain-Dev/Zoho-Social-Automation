@@ -8,7 +8,7 @@ With a free zoho social account you can connect a **Facebook Page**, a **Faceboo
 
 ## Usage
 
-1. Open "puppeteer-script.js" replace "YOUR-ZOHO-USERNAME" with your zoho username & "YOUR-ZOHO-PASSWORD" with your password.
-2. open Terminal & execute "node index.js"
-
-Note: With puppeteer we can also handle File uploads, this function as of now is not available in PhantomJsCloud, the support team said they are working on it & hopefully add it in few months.
+1. Rename `.env.example` to `.env`.
+2. Put your Zoho social credentials in `.env` file.
+3. Run `yarn install` or `npm install`.
+4. Use `npm start` command to run the script.

@@ -24,8 +24,8 @@ const waitForTimeout = (milliseconds = 1000) =>
   try {
     const browser = await puppeteer.launch({
       // for debugging
-      headless: false,
-      slowMo: 250,
+      // headless: false,
+      // slowMo: 250,
     });
     const page = await browser.newPage();
     await page.goto(zohoLoginUrl, {

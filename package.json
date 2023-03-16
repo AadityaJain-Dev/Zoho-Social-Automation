@@ -1,0 +1,28 @@
+{
+  "name": "auto-social-media-publisher",
+  "version": "1.0.0",
+  "description": "You can use these scripts for remotely publishing stuff on your social media profile & pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AadityaJain-Dev/Auto-Social-Media-Publisher.git"
+  },
+  "author": {
+    "name": "Aditya Jain",
+    "email": "hey@aadityajain.dev",
+    "url": "http://www.aadityajain.dev/"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AadityaJain-Dev/Auto-Social-Media-Publisher/issues"
+  },
+  "homepage": "https://github.com/AadityaJain-Dev/Auto-Social-Media-Publisher#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "puppeteer": "^19.7.5"
+  }
+}

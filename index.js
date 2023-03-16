@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const path = require('path');
 require('dotenv').config();
 
 // const strings
@@ -7,8 +8,15 @@ const zohoLogout = 'https://social.zoho.in/Logout.do';
 const zohoHomePage = 'https://social.zoho.in/Home.do';
 const zohoUsername = process.env.ZOHO_USERNAME; // your zoho username
 const zohoPassword = process.env.ZOHO_PASSWORD; // your zoho password
-const textToPublishWithPost = () => 'TEXT-TO-PUBLISH-HERE';
+const textToPublishWithPost = ((postText = 'TEXT-TO-PUBLISH-HERE') =>
+  postText)();
+const fileName = '\\test.png';
+const filePath = path.relative(process.cwd(), __dirname + fileName);
 
+/*
+  Use this function to wait for a specific amount of milliseconds
+  @params milliseconds {Integer}
+*/
 const waitForTimeout = (milliseconds = 1000) =>
   new Promise((resolveInner) => setTimeout(resolveInner, milliseconds));
 
@@ -51,19 +59,21 @@ const waitForTimeout = (milliseconds = 1000) =>
       delay: 50,
     });
     await waitForTimeout(500); //you can remove this if you want
+
+    // upload a file 
+    const inputFileUpload = await page.$('#publish_image_attach > div > input');
+    await inputFileUpload.uploadFile(filePath);
+    await inputFileUpload.evaluate((upload) =>
+      upload.dispatchEvent(new Event('change', { bubbles: true })),
+    );
+    await waitForTimeout(500); //you can remove this if you want
+
+    // click on publish button
     await page.evaluate(() => {
       document.querySelector('#publish_postnow').click();
     });
 
-    // // starting logout process
-    // await page.evaluate(() => {
-    //   document.querySelector('#user_setup > div').click();
-    // });
-    // await page.waitForSelector('a.colorRed');
-    // await page.evaluate(() => {
-    //   // click on logout button
-    //   document.querySelector('a.colorRed').click();
-    // });
+    await waitForTimeout(10000); // waiting for 10 in second, to make sure post is published on all platform
 
     // go to this URL to end session
     await page.goto(zohoLogout, {
